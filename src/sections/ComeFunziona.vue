@@ -1,5 +1,5 @@
 <template>
-<div class="pt-8 pb-24 px-12">
+<div class="pt-8 pb-24 px-12 gr-dark">
     <ui-title title="Come funziona" />
     <img
         :src="comeFunziona"
