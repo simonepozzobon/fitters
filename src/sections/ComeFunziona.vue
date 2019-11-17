@@ -27,7 +27,6 @@ export default {
     },
     methods: {
         viewHandler: function (e) {
-            console.log(e.percentInView);
             if (e.percentInView > 0.5) {
                 this.$root.current = 'come-funziona'
             }
