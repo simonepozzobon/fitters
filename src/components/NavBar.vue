@@ -1,5 +1,8 @@
 <template>
-<div class="flex flex-row items-center py-8 px-12 fixed w-full">
+<div
+    ref="menu"
+    class="flex flex-row items-center py-8 px-12 fixed w-full smooth"
+>
     <div class="text-white">
         <svg
             class="h-8"
@@ -17,17 +20,17 @@
 
     <div class="text-white ml-auto font-bold text-sm">
         <ul class="flex menu items-center">
-            <li class="mr-10">
+            <li class="mr-6">
                 <a href="#">
                     Chi siamo
                 </a>
             </li>
-            <li class="mr-10">
+            <li class="mr-6">
                 <a href="#">
                     Come Funziona
                 </a>
             </li>
-            <li class="mr-10 active">
+            <li class="mr-6 active">
                 <a href="#">
                     Iscriviti
                 </a>
@@ -50,15 +53,74 @@ export default {
             return `gr-dark`
         },
     },
+    methods: {
+        setBg: function () {
+            let y = document.documentElement.scrollTop || document.body.scrollTop;
+            if (y > 109) {
+                this.$refs.menu.classList.add('smooth-bg')
+            }
+            else {
+                this.$refs.menu.classList.remove('smooth-bg')
+            }
+        }
+    },
+    mounted: function () {
+        window.onscroll = () => {
+            this.setBg()
+        }
+    },
 }
 </script>
 
 <style lang="scss">
-.menu .active {
-    @apply gr-light rounded-full px-6 py-3;
+.menu {
+    transition: all 0.2s ease-in-out;
+    li {
+        @apply rounded-full px-6 py-3;
 
-    > a {
-        @apply text-gr-orange;
+        &:hover {
+            @apply bg-light rounded-full px-6 py-3;
+            transition: all 0.2s ease-in-out;
+
+            > a {
+                @apply text-orange;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    .active {
+        @apply bg-light rounded-full px-6 py-3;
+
+        > a {
+            @apply text-orange;
+        }
+    }
+}
+
+.smooth {
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+
+    > div {
+        z-index: 2;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        @apply gr-dark shadow-lg;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    &.smooth-bg:after {
+        opacity: 1;
     }
 }
 </style>

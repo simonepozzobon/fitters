@@ -43,6 +43,7 @@ module.exports = {
             'slide': 'calc(100vh - 12rem)',
         },
         gradients: theme => ({
+            'transparent': ['transparent', 'transparent'],
             'orange': [theme('colors.orange.500'), theme('colors.orange.400')],
             'dark': [theme('colors.dark.500'), theme('colors.dark.300')],
             'light': [theme('colors.light.300'), theme('colors.light.600')]
