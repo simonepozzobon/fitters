@@ -1,5 +1,8 @@
 <template>
-<div class="text-white">
+<div
+    class="text-white"
+    v-view="viewHandler"
+>
     <img
         :src="main"
         alt=""
@@ -17,6 +20,13 @@ export default {
         return {
             main: main
         }
+    },
+    methods: {
+        viewHandler: function (e) {
+            if (e.percentInView > 0.5) {
+                this.$root.current = null
+            }
+        },
     },
 }
 </script>

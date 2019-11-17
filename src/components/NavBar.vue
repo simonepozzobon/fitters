@@ -20,7 +20,10 @@
 
     <div class="text-white ml-auto font-bold text-sm">
         <ul class="flex menu items-center">
-            <li class="mr-6">
+            <li
+                id="menu-chi-siamo"
+                class="mr-6"
+            >
                 <a
                     href="#"
                     @click.prevent.stop="goTo('chi-siamo')"
@@ -28,7 +31,10 @@
                     Chi siamo
                 </a>
             </li>
-            <li class="mr-6">
+            <li
+                id="menu-come-funziona"
+                class="mr-6"
+            >
                 <a
                     href="#"
                     @click.prevent.stop="goTo('come-funziona')"
@@ -36,7 +42,10 @@
                     Come Funziona
                 </a>
             </li>
-            <li class="mr-6 active">
+            <li
+                id="menu-iscriviti"
+                class="mr-6"
+            >
                 <a
                     href="#"
                     @click.prevent.stop="goTo('iscriviti')"
@@ -44,7 +53,7 @@
                     Iscriviti
                 </a>
             </li>
-            <li>
+            <li id="menu-contattaci">
                 <a
                     href="#"
                     @click.prevent.stop="goTo('contattaci')"
@@ -75,7 +84,23 @@ export default {
             return `gr-dark`
         },
     },
+    watch: {
+        '$root.current': function () {
+            this.setActive()
+        }
+    },
     methods: {
+        setActive: function () {
+            let previous = document.getElementsByClassName('menu-active')
+            for (let i = 0; i < previous.length; i++) {
+                previous[i].classList.remove('menu-active')
+            }
+
+            let current = document.getElementById(`menu-${this.$root.current}`)
+            if (current) {
+                current.classList.add('menu-active')
+            }
+        },
         setBg: function () {
             let y = document.documentElement.scrollTop || document.body.scrollTop;
             if (y > 109) {
@@ -121,7 +146,7 @@ export default {
         }
     }
 
-    .active {
+    .menu-active {
         @apply bg-light rounded-full px-6 py-3;
 
         > a {

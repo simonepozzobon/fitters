@@ -1,7 +1,8 @@
 <template>
 <div
-    class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center"
     id="iscriviti"
+    class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center"
+    v-view="viewHandler"
 >
     <ui-title class="text-5xl leading-none text-center">
         Vuoi prendere parte anche tu alla rivoluzione del fitness?
@@ -54,6 +55,13 @@ export default {
         UiButton,
         UiInput,
         UiTitle,
+    },
+    methods: {
+        viewHandler: function (e) {
+            if (e.percentInView > 0.5) {
+                this.$root.current = 'iscriviti'
+            }
+        }
     },
 }
 </script>

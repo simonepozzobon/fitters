@@ -1,7 +1,8 @@
 <template>
 <div
-    class="pt-8 pb-24 px-12 gr-dark"
     id="come-funziona"
+    class="pt-8 pb-24 px-12 gr-dark"
+    v-view="viewHandler"
 >
     <ui-title title="Come funziona" />
     <img
@@ -22,6 +23,14 @@ export default {
     data: function () {
         return {
             comeFunziona: comeFunziona
+        }
+    },
+    methods: {
+        viewHandler: function (e) {
+            console.log(e.percentInView);
+            if (e.percentInView > 0.5) {
+                this.$root.current = 'come-funziona'
+            }
         }
     },
 }

@@ -1,7 +1,8 @@
 <template>
 <div
-    class="py-8 px-12 gr-dark"
     id="chi-siamo"
+    class="py-8 px-12 gr-dark"
+    v-view="viewHandler"
 >
     <div class="flex flex-row">
         <div class="w-4/12">
@@ -40,6 +41,13 @@ export default {
     data: function () {
         return {
             phone: phone,
+        }
+    },
+    methods: {
+        viewHandler: function (e) {
+            if (e.percentInView > 0.5) {
+                this.$root.current = 'chi-siamo'
+            }
         }
     },
 }

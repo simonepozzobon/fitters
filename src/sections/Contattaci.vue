@@ -1,7 +1,8 @@
 <template>
 <div
-    class="pt-8 pb-24 px-12"
     id="contattaci"
+    class="pt-8 pb-24 px-12"
+    v-view="viewHandler"
 >
     <ui-title title="Contattaci" />
     <p class="text-white leading-normal mt-6 font-bold">
@@ -76,6 +77,13 @@ export default {
         UiInput,
         UiTitle,
         UiTextArea,
+    },
+    methods: {
+        viewHandler: function (e) {
+            if (e.percentInView > 0.5) {
+                this.$root.current = 'contattaci'
+            }
+        }
     },
 }
 </script>
