@@ -1,32 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<div
+    id="app"
+    class="antialiased min-h-screen"
+>
+    <nav-bar />
+    <main-header />
+    <call-to-action />
+</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import './assets/css/tailwind.css'
+import CallToAction from './components/CallToAction.vue'
+import MainHeader from './sections/MainHeader.vue'
+import NavBar from './components/NavBar.vue'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+    name: 'app',
+    components: {
+        CallToAction,
+        MainHeader,
+        NavBar,
     }
-  }
+}
+</script>
+
+<style lang="scss">
+body {
+    @apply bg-dark;
 }
 </style>
