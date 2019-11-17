@@ -1,5 +1,5 @@
 <template>
-<div class="py-8 px-12 bg-light flex flex-col justify-center items-center">
+<div class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center">
     <ui-title class="text-5xl leading-none text-center">
         Vuoi prendere parte anche tu alla rivoluzione del fitness?
     </ui-title>
@@ -31,10 +31,10 @@
         checkboxes
     </div>
 
-    <div class="mt-4">
+    <div class="mt-12">
         <ui-button
             title="Iscriviti"
-            class="text-2xl"
+            size="lg"
         />
     </div>
 </div>

@@ -1,11 +1,14 @@
 <template>
-<input
+<textarea
     :type="type"
     :name="name"
     :placeholder="placeholder"
-    class="border border-orange-500 focus:border-orange-400 rounded-full bg-transparent px-4 py-2 custom-placeholder w-full outline-none"
+    class="border border-orange-500 focus:border-orange-400 rounded-xl bg-transparent px-4 py-2 custom-placeholder w-full outline-none"
     :class="colorClass"
+    rows="10"
 >
+
+</textarea>
 </template>
 
 <script>
@@ -42,5 +45,9 @@ export default {
     @apply font-bold;
     @apply uppercase;
     @apply italic;
+}
+
+textarea {
+    resize: none;
 }
 </style>

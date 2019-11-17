@@ -1,6 +1,7 @@
 const {
     colors,
     opacity,
+    borderRadius,
 } = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -24,6 +25,7 @@ module.exports = {
                     default: '#E6E6E6',
                 },
                 orange: {
+                    ...colors.orange,
                     '400': '#FF5900',
                     '500': '#FF2A00',
                     default: '#FF2A00',
@@ -31,8 +33,12 @@ module.exports = {
             },
             spacing: {
                 '28': '7rem',
-            }
+            },
+            borderRadius: {
+                'xl': '1.25rem',
+            },
         },
+
         minHeight: {
             'slide': 'calc(100vh - 12rem)',
         },

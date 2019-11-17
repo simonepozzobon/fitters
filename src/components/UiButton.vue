@@ -1,7 +1,8 @@
 <template>
 <a
     href="#"
-    class="gr-orange px-6 py-3 rounded-full text-white font-semibold tracking-wide"
+    class="gr-orange rounded-full text-white font-semibold"
+    :class="sizeClass"
 >
     {{ title }}
 </a>
@@ -14,6 +15,26 @@ export default {
         title: {
             type: String,
             default: null,
+        },
+        size: {
+            type: String,
+            default: null,
+        },
+    },
+    computed: {
+        sizeClass: function () {
+            let x = 6,
+                y = 3,
+                text = 'base',
+                tracking = 'wide'
+
+            if (this.size == 'lg') {
+                x = 10
+                y = 4
+                tracking = 'normal'
+                text = 'xl'
+            }
+            return `px-${x} py-${y} text-${text} tracking-${tracking}`
         },
     },
 }
