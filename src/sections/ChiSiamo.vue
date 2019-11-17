@@ -2,7 +2,7 @@
 <div class="py-8 px-12">
     <div class="flex flex-row">
         <div class="w-4/12">
-            <h2 class="text-orange-500 font-black uppercase text-3xl italic tracking-wide">
+            <h2 class="text-orange-500 font-black uppercase text-3xl italic tracking-wide mt-4">
                 Chi siamo
             </h2>
             <p class="text-white leading-normal mt-6 font-bold">
@@ -17,15 +17,25 @@
                 La rivoluzione del fitness è iniziata.
             </p>
         </div>
-        <div class="w-8/12">
-            Immagine
+        <div class="w-8/12 flex justify-end">
+            <img
+                :src="phone"
+                alt=""
+            >
         </div>
     </div>
 </div>
 </template>
 
 <script>
+const phone = require('../assets/images/phone.png')
+
 export default {
     name: 'ChiSiamo',
+    data: function () {
+        return {
+            phone: phone,
+        }
+    },
 }
 </script>
