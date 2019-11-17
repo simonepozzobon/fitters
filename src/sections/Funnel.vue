@@ -4,10 +4,12 @@
     class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center"
     v-view="viewHandler"
 >
-    <ui-title class="text-5xl leading-none text-center">
-        Vuoi prendere parte anche tu alla rivoluzione del fitness?
-    </ui-title>
-    <div class="flex flex-row w-6/12 mt-12">
+    <div class="w-8/12 mt-12">
+        <ui-title class="text-5xl leading-none text-center">
+            Vuoi prendere parte anche tu alla rivoluzione del fitness?
+        </ui-title>
+    </div>
+    <div class="flex flex-row w-6/12 mt-24">
         <div class="w-6/12 mr-6">
             <ui-input
                 name="name"
@@ -21,7 +23,7 @@
             />
         </div>
     </div>
-    <div class="flex w-6/12 mt-8">
+    <div class="flex w-6/12 mt-10">
         <div class="w-full">
             <ui-input
                 type="email"
@@ -31,7 +33,7 @@
         </div>
     </div>
 
-    <div class="mt-8">
+    <div class="mt-12">
         <ui-checkbox label="Ho un abbonamento in palestra" />
         <ui-checkbox
             label="Non ho un abbonamento in palestra"
@@ -39,7 +41,7 @@
         />
     </div>
 
-    <div class="mt-12">
+    <div class="mt-24">
         <ui-button
             title="Iscriviti"
             size="lg"
