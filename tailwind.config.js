@@ -14,6 +14,9 @@ module.exports = {
                     '400': '#FF5900',
                     '500': '#FF2A00',
                 }
+            },
+            spacing: {
+                '28': '7rem',
             }
         },
         minHeight: {
