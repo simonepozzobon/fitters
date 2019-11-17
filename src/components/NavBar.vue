@@ -15,19 +15,19 @@
         </svg>
     </div>
 
-    <div class="text-white ml-auto">
-        <ul class="flex">
-            <li class="mr-6">
+    <div class="text-white ml-auto font-bold text-sm">
+        <ul class="flex menu items-center">
+            <li class="mr-10">
                 <a href="#">
                     Chi siamo
                 </a>
             </li>
-            <li class="mr-6">
+            <li class="mr-10">
                 <a href="#">
                     Come Funziona
                 </a>
             </li>
-            <li class="mr-6">
+            <li class="mr-10 active">
                 <a href="#">
                     Iscriviti
                 </a>
@@ -45,5 +45,20 @@
 <script>
 export default {
     name: 'NavBar',
+    computed: {
+        backgroundColor: function () {
+            return `gr-dark`
+        },
+    },
 }
 </script>
+
+<style lang="scss">
+.menu .active {
+    @apply gr-light rounded-full px-6 py-3;
+
+    > a {
+        @apply text-gr-orange;
+    }
+}
+</style>
