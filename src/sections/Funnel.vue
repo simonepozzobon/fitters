@@ -31,8 +31,12 @@
         </div>
     </div>
 
-    <div>
-        checkboxes
+    <div class="mt-8">
+        <ui-checkbox label="Ho un abbonamento in palestra" />
+        <ui-checkbox
+            label="Non ho un abbonamento in palestra"
+            class="mt-8"
+        />
     </div>
 
     <div class="mt-12">
@@ -46,6 +50,7 @@
 
 <script>
 import UiButton from '../components/UiButton.vue'
+import UiCheckbox from '../components/UiCheckbox.vue'
 import UiInput from '../components/UiInput.vue'
 import UiTitle from '../components/UiTitle.vue'
 
@@ -53,6 +58,7 @@ export default {
     name: 'ChiSiamo',
     components: {
         UiButton,
+        UiCheckbox,
         UiInput,
         UiTitle,
     },
