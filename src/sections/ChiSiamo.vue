@@ -1,10 +1,8 @@
 <template>
-<div class="py-8 px-12">
+<div class="py-8 px-12 gr-dark">
     <div class="flex flex-row">
         <div class="w-4/12">
-            <h2 class="text-orange-500 font-black uppercase text-3xl italic tracking-wide mt-4">
-                Chi siamo
-            </h2>
+            <ui-title title="Chi siamo" />
             <p class="text-white leading-normal mt-6 font-bold">
                 Siamo la libertà al servizio degli amanti del fitness.<br>
                 <br>
@@ -29,9 +27,13 @@
 
 <script>
 const phone = require('../assets/images/phone.png')
+import UiTitle from '../components/UiTitle.vue'
 
 export default {
     name: 'ChiSiamo',
+    components: {
+        UiTitle,
+    },
     data: function () {
         return {
             phone: phone,

@@ -1,8 +1,6 @@
 <template>
 <div class="bg-light py-8 px-12">
-    <h2 class="text-orange-500 font-black uppercase text-3xl italic tracking-wide mt-4">
-        Vantaggi
-    </h2>
+    <ui-title title="vantaggi" />
     <div class="flex flex-row justify-around mt-12 pb-24">
         <ui-icon
             class="w-3/12"
@@ -72,10 +70,12 @@
 
 <script>
 import UiIcon from '../components/UiIcon.vue'
+import UiTitle from '../components/UiTitle.vue'
 export default {
     name: 'ChiSiamo',
     components: {
         UiIcon,
+        UiTitle,
     },
 }
 </script>

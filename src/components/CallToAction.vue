@@ -1,7 +1,7 @@
 <template>
-<div class="bg-light flex flex-row items-center w-full py-8 px-12">
+<div class="gr-light flex flex-row items-center w-full py-8 px-12">
     <div>
-        <span class="text-3xl text-orange-500 font-bold italic">
+        <span class="text-3xl text-gr-orange font-bold italic">
             Vieni in palestra con noi.
         </span>
     </div>

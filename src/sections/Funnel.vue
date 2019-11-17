@@ -1,8 +1,8 @@
 <template>
 <div class="py-8 px-12 bg-light flex flex-col justify-center items-center">
-    <h2 class="block text-orange-500 font-black uppercase text-5xl italic mt-4 text-center leading-none">
+    <ui-title class="text-5xl leading-none text-center">
         Vuoi prendere parte anche tu alla rivoluzione del fitness?
-    </h2>
+    </ui-title>
     <div class="flex flex-row w-6/12 mt-12">
         <div class="w-6/12 mr-6">
             <ui-input
@@ -43,12 +43,14 @@
 <script>
 import UiButton from '../components/UiButton.vue'
 import UiInput from '../components/UiInput.vue'
+import UiTitle from '../components/UiTitle.vue'
 
 export default {
     name: 'ChiSiamo',
     components: {
         UiButton,
         UiInput,
+        UiTitle,
     },
 }
 </script>

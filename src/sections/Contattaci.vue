@@ -2,9 +2,7 @@
 <div class="py-8 px-12">
     <div class="flex flex-row">
         <div class="w-4/12">
-            <h2 class="text-orange-500 font-black uppercase text-3xl italic tracking-wide">
-                Chi siamo
-            </h2>
+            <ui-title title="Contattaci" />
             <p class="text-white leading-normal mt-6 font-bold">
                 Siamo la libertà al servizio degli amanti del fitness.<br>
                 <br>
@@ -25,7 +23,11 @@
 </template>
 
 <script>
+import UiTitle from '../components/UiTitle.vue'
 export default {
     name: 'ChiSiamo',
+    components: {
+        UiTitle
+    },
 }
 </script>
