@@ -1,5 +1,8 @@
 <template>
-<div class="pt-8 pb-24 px-12">
+<div
+    class="pt-8 pb-24 px-12"
+    id="contattaci"
+>
     <ui-title title="Contattaci" />
     <p class="text-white leading-normal mt-6 font-bold">
         Hai domande o suggerimenti?<br>

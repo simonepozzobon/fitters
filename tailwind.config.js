@@ -40,7 +40,10 @@ module.exports = {
         },
 
         minHeight: {
-            'slide': 'calc(100vh - 12rem)',
+            'slide': 'calc(100vh - 10rem)',
+        },
+        maxHeight: {
+            'slide': 'calc(100vh - 10rem)',
         },
         gradients: theme => ({
             'transparent': ['transparent', 'transparent'],

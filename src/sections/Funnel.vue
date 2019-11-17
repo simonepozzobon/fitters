@@ -1,5 +1,8 @@
 <template>
-<div class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center">
+<div
+    class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center"
+    id="iscriviti"
+>
     <ui-title class="text-5xl leading-none text-center">
         Vuoi prendere parte anche tu alla rivoluzione del fitness?
     </ui-title>

@@ -1,5 +1,8 @@
 <template>
-<div class="py-8 px-12 gr-dark">
+<div
+    class="py-8 px-12 gr-dark"
+    id="chi-siamo"
+>
     <div class="flex flex-row">
         <div class="w-4/12">
             <ui-title title="Chi siamo" />

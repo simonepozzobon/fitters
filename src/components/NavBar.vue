@@ -21,22 +21,34 @@
     <div class="text-white ml-auto font-bold text-sm">
         <ul class="flex menu items-center">
             <li class="mr-6">
-                <a href="#">
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('chi-siamo')"
+                >
                     Chi siamo
                 </a>
             </li>
             <li class="mr-6">
-                <a href="#">
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('come-funziona')"
+                >
                     Come Funziona
                 </a>
             </li>
             <li class="mr-6 active">
-                <a href="#">
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('iscriviti')"
+                >
                     Iscriviti
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('contattaci')"
+                >
                     Contattaci
                 </a>
             </li>
@@ -46,6 +58,16 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+import {
+    gsap,
+    ScrollToPlugin,
+}
+from 'gsap/all'
+
+gsap.registerPlugin(ScrollToPlugin)
+/* eslint-enable no-unused-vars */
+
 export default {
     name: 'NavBar',
     computed: {
@@ -62,9 +84,19 @@ export default {
             else {
                 this.$refs.menu.classList.remove('smooth-bg')
             }
+        },
+        goTo: function (name) {
+            gsap.to(window, {
+                duration: .4,
+                scrollTo: {
+                    y: `#${name}`,
+                    offsetY: 109,
+                }
+            })
         }
     },
     mounted: function () {
+        this.setBg()
         window.onscroll = () => {
             this.setBg()
         }
