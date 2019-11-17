@@ -31,8 +31,11 @@
         checkboxes
     </div>
 
-    <div>
-        <ui-button title="Iscriviti" />
+    <div class="mt-4">
+        <ui-button
+            title="Iscriviti"
+            class="text-2xl"
+        />
     </div>
 </div>
 </template>

@@ -6,18 +6,17 @@
         </span>
     </div>
     <div class="ml-auto">
-        <a
-            href="#"
-            class="bg-orange-500 px-6 py-3 rounded-full text-white font-semibold tracking-wide"
-        >
-            Iscriviti
-        </a>
+        <ui-button title="Iscriviti" />
     </div>
 </div>
 </template>
 
 <script>
+import UiButton from './UiButton.vue'
 export default {
     name: 'CallToAction',
+    components: {
+        UiButton,
+    },
 }
 </script>

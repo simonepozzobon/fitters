@@ -21,8 +21,16 @@ module.exports = {
         },
         minHeight: {
             'slide': 'calc(100vh - 12rem)',
-        }
+        },
+        gradients: theme => ({
+            'orange': [theme('colors.orange.500'), theme('colors.orange.400')]
+        }),
+        textGradients: theme => ({
+            'orange': [theme('colors.orange.500'), theme('colors.orange.400')]
+        })
     },
     variants: {},
-    plugins: []
+    plugins: [
+        require('./src/plugins/gradients')
+    ]
 }

@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row items-center py-8 px-12">
+<div class="flex flex-row items-center py-8 px-12 fixed w-full">
     <div class="text-white">
         <svg
             class="h-8"
