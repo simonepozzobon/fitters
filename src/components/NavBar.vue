@@ -44,7 +44,7 @@
             </li>
             <li
                 id="menu-iscriviti"
-                class="mr-6"
+                class="mr-6 border border-orange hover:border-transparent"
             >
                 <a
                     href="#"
@@ -132,6 +132,7 @@ export default {
 <style lang="scss">
 .menu {
     transition: all 0.2s ease-in-out;
+
     li {
         @apply rounded-full px-6 py-3;
 
