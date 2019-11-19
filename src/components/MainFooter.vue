@@ -1,8 +1,8 @@
 <template>
-<div class="gr-orange flex flex-row items-start w-full py-24 px-12">
-    <div class="text-white w-4/12 mt-2">
+<div class="gr-orange flex flex-col w-full py-24 px-12 items-center lg:flex-row lg:items-start ">
+    <div class="text-white lg:w-4/12 lg:mt-2">
         <svg
-            class="h-5"
+            class="h-8 lg:h-5"
             viewBox="0 0 512 86"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -14,18 +14,28 @@
             ></path>
         </svg>
     </div>
-    <div class="text-white w-4/12 leading-loose font-bold italic uppercase">
-        <ul>
-            <li>Chi siamo</li>
-            <li>Come funziona</li>
-            <li>Iscriviti</li>
-            <li>Contattaci</li>
-        </ul>
-    </div>
-    <div class="text-white w-4/12 leading-loose font-semibold italic tracking-wider">
+    <div class="text-white text-center leading-loose font-bold italic uppercase mt-8 lg:mt-0 lg:w-4/12 lg:text-left">
         <ul>
             <li>
-                fitters.app@gmail.com
+                <a href="#">Chi siamo</a>
+            </li>
+            <li>
+                <a href="#">Come funziona</a>
+            </li>
+            <li>
+                <a href="#">Iscriviti</a>
+            </li>
+            <li>
+                <a href="#">Contattaci</a>
+            </li>
+        </ul>
+    </div>
+    <div class="text-white leading-loose font-semibold italic tracking-wider text-center mt-8 lg:mt-0 lg:w-4/12 lg:text-left">
+        <ul>
+            <li>
+                <a href="mailto:fitters.app@gmail.com">
+                    fitters.app@gmail.com
+                </a>
             </li>
             <li class="mt-6">
                 Via Arrigo Boito, 8<br>
@@ -33,7 +43,7 @@
             </li>
         </ul>
     </div>
-    <div class="text-white w-4/12 flex flex-row justify-end items-center mt-2 self-center">
+    <div class="text-white flex flex-row justify-end items-center mt-8 lg:mt-2 lg:self-center lg:w-4/12">
         <div class="w-8 h-8">
             <a href="#">
                 <svg

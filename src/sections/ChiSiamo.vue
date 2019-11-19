@@ -5,7 +5,7 @@
     v-view="viewHandler"
 >
     <div class="flex flex-row">
-        <div class="w-4/12">
+        <div class="lg:w-4/12 text-center lg:text-left">
             <ui-title title="Chi siamo" />
             <p class="text-white leading-normal mt-6 font-bold">
                 Siamo la libertà al servizio degli amanti del fitness.<br>
@@ -19,7 +19,7 @@
                 La rivoluzione del fitness è iniziata.
             </p>
         </div>
-        <div class="w-8/12 flex justify-end">
+        <div class="hidden lg:flex lg:w-8/12 lg:justify-end">
             <img
                 :src="phone"
                 alt=""

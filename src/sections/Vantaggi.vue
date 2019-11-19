@@ -1,9 +1,12 @@
 <template>
 <div class="bg-light py-8 px-12">
-    <ui-title title="vantaggi" />
-    <div class="flex flex-row justify-around mt-12 pb-24">
+    <ui-title
+        title="vantaggi"
+        class="text-center lg:text-left"
+    />
+    <div class="flex flex-col items-center lg:items-start lg:flex-row lg:justify-around mt-12 pb-24">
         <ui-icon
-            class="w-3/12"
+            class="w-10/12 md:w-6/12 lg:w-3/12"
             title="libertà"
         >
             <template v-slot:icon>
@@ -24,7 +27,7 @@
             Perché puoi scegliere di allenarti ogni giorno in una palestra diversa.
         </ui-icon>
         <ui-icon
-            class="w-3/12"
+            class="mt-10 w-10/12 md:w-6/12 lg:mt-0 lg:w-3/12"
             title="risparmio"
         >
             <template v-slot:icon>
@@ -44,7 +47,7 @@
             Perché se entri in palestra utilizzando FITTERS, il costo per l’ingresso è più basso.
         </ui-icon>
         <ui-icon
-            class="w-3/12"
+            class="mt-10 w-10/12 md:w-6/12 lg:mt-0 lg:w-3/12"
             title="guadagno"
         >
             <template v-slot:icon>
