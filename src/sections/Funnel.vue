@@ -4,26 +4,26 @@
     class="pt-8 pb-24 px-12 gr-light flex flex-col justify-center items-center"
     v-view="viewHandler"
 >
-    <div class="w-8/12 mt-12">
-        <ui-title class="text-5xl leading-none text-center">
+    <div class="md:mt-12 lg:w-8/12">
+        <ui-title class="text-4xl lg:text-5xl leading-none text-center">
             Vuoi prendere parte anche tu alla rivoluzione del fitness?
         </ui-title>
     </div>
-    <div class="flex flex-row w-6/12 mt-24">
-        <div class="w-6/12 mr-6">
+    <div class="flex flex-col w-full mt-10 lg:flex-row lg:w-6/12 lg:mt-24">
+        <div class="lg:w-6/12 lg:mr-6">
             <ui-input
                 name="name"
                 placeholder="Nome"
             />
         </div>
-        <div class="w-6/12 ml-6">
+        <div class="mt-10 lg:mt-0 lg:w-6/12 lg:ml-6">
             <ui-input
                 name="surname"
                 placeholder="Cognome"
             />
         </div>
     </div>
-    <div class="flex w-6/12 mt-10">
+    <div class="flex w-full lg:w-6/12 mt-10">
         <div class="w-full">
             <ui-input
                 type="email"
