@@ -1,7 +1,7 @@
 <template>
 <div
     id="app"
-    class="antialiased min-h-screen"
+    class="antialiased min-h-screen w-full"
 >
     <nav-bar />
     <main-header />
