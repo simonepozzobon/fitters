@@ -18,7 +18,7 @@
         </svg>
     </div>
 
-    <div class="text-white ml-auto font-bold text-sm">
+    <div class="text-white ml-auto font-bold text-sm hidden lg:block">
         <ul class="flex menu items-center">
             <li
                 id="menu-chi-siamo"
