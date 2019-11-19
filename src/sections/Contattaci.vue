@@ -4,20 +4,23 @@
     class="pt-8 pb-24 px-12"
     v-view="viewHandler"
 >
-    <ui-title title="Contattaci" />
-    <p class="text-white leading-normal mt-6 font-bold">
+    <ui-title
+        title="Contattaci"
+        class="text-center lg:text-left"
+    />
+    <p class="text-white leading-normal mt-6 font-bold text-center lg:text-left">
         Hai domande o suggerimenti?<br>
     </p>
     <div class="flex flex-col w-full justify-center items-center">
-        <div class="flex flex-row w-6/12 mt-12">
-            <div class="w-6/12 mr-6">
+        <div class="flex flex-col w-full lg:flex-row lg:w-6/12 mt-12">
+            <div class="w-full lg:w-6/12 lg:mr-6">
                 <ui-input
                     name="name"
                     placeholder="Nome"
                     color="white"
                 />
             </div>
-            <div class="w-6/12 ml-6">
+            <div class="w-full mt-8 lg:mt-0 lg:w-6/12 lg:ml-6">
                 <ui-input
                     name="surname"
                     placeholder="Cognome"
@@ -25,8 +28,8 @@
                 />
             </div>
         </div>
-        <div class="flex w-6/12 mt-8">
-            <div class="w-full">
+        <div class="flex flex-col w-full lg:w-6/12">
+            <div class="w-full mt-8">
                 <ui-input
                     type="email"
                     name="email"
@@ -34,18 +37,14 @@
                     color="white"
                 />
             </div>
-        </div>
-        <div class="flex w-6/12 mt-8">
-            <div class="w-full">
+            <div class="w-full mt-8">
                 <ui-input
                     name="subject"
                     placeholder="Oggetto"
                     color="white"
                 />
             </div>
-        </div>
-        <div class="flex w-6/12 mt-8">
-            <div class="w-full">
+            <div class="w-full mt-8">
                 <ui-text-area
                     name="message"
                     placeholder="Messaggio"
