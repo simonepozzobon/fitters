@@ -73,6 +73,7 @@ export default {
                 autoAlpha: 1,
                 height: '100%',
                 ease: 'power4.easeInOut',
+                immediateRender: false,
                 onStart: () => {
                     // eslint-disable-next-line no-console
                     console.log('starting');
@@ -82,6 +83,8 @@ export default {
                     console.log('progress');
                 }
             })
+
+            this.master.progress(1).progress(0)
         },
         toggle: function () {
             if (this.master) {
