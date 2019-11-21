@@ -1,6 +1,7 @@
 <template>
 <div
     ref="menu"
+    id="mobile-menu"
     class="fixed overflow-hidden w-full gr-dark flex justify-center items-center menu-mobile"
 >
     <ul class="py-24 text-white font-bold flex flex-col justify-around h-full text-center">
@@ -43,6 +44,7 @@
 <script>
 import {
     gsap,
+    TimelineMax,
     ScrollToPlugin,
 }
 from 'gsap/all'
@@ -60,7 +62,7 @@ export default {
         init: function () {
             let menu = this.$refs.menu
 
-            this.master = gsap.timeline({
+            this.master = new TimelineMax({
                 paused: true,
                 yoyo: true
             })
