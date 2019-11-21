@@ -6,9 +6,9 @@
 >
     <ui-title
         title="Contattaci"
-        class="text-center lg:text-left"
+        class="text-center"
     />
-    <p class="text-white leading-normal mt-6 font-bold text-center lg:text-left">
+    <p class="text-white leading-normal mt-6 font-bold text-center">
         Hai domande o suggerimenti?<br>
     </p>
     <div class="flex flex-col w-full justify-center items-center">
