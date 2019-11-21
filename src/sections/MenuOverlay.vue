@@ -45,9 +45,6 @@
 import gsap from 'gsap'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
-// eslint-disable-next-line no-console
-console.log(gsap);
-
 gsap.registerPlugin(ScrollToPlugin)
 
 export default {
@@ -76,14 +73,6 @@ export default {
                 height: '100%',
                 ease: 'power4.easeInOut',
                 immediateRender: false,
-                onStart: () => {
-                    // eslint-disable-next-line no-console
-                    console.log('starting');
-                },
-                onUpdate: () => {
-                    // eslint-disable-next-line no-console
-                    console.log('progress');
-                }
             })
 
             this.master.progress(1).progress(0)
