@@ -1,13 +1,22 @@
 <template>
 <div
     id="come-funziona"
-    class="pt-8 pb-24 px-12 gr-dark"
+    class="pt-8 pb-24 gr-dark"
     v-view="viewHandler"
 >
-    <ui-title title="Come funziona" />
+    <ui-title
+        title="Come funziona"
+        class="px-12 text-center"
+    />
     <img
         :src="comeFunziona"
-        alt=""
+        alt="Come funziona"
+        class="hidden md:block px-12"
+    >
+    <img
+        :src="comeFunzionaMobile"
+        alt="Come Funziona"
+        class="md:hidden"
     >
 </div>
 </template>
@@ -15,6 +24,8 @@
 <script>
 import UiTitle from '../components/UiTitle.vue'
 const comeFunziona = require('../assets/images/come_funziona.svg')
+const comeFunzionaMobile = require('../assets/images/come_funziona_mobile.svg')
+
 export default {
     name: 'ChiSiamo',
     components: {
@@ -22,7 +33,8 @@ export default {
     },
     data: function () {
         return {
-            comeFunziona: comeFunziona
+            comeFunziona: comeFunziona,
+            comeFunzionaMobile: comeFunzionaMobile,
         }
     },
     methods: {
