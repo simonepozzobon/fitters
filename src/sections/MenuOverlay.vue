@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import {
-    gsap,
-    TimelineMax,
-    ScrollToPlugin,
-}
-from 'gsap/all'
+import gsap from 'gsap'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
+
+// eslint-disable-next-line no-console
+console.log(gsap);
+
 gsap.registerPlugin(ScrollToPlugin)
 
 export default {
@@ -62,7 +62,7 @@ export default {
         init: function () {
             let menu = this.$refs.menu
 
-            this.master = new TimelineMax({
+            this.master = gsap.timeline({
                 paused: true,
                 yoyo: true
             })
