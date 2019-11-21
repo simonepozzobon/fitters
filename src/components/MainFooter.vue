@@ -17,16 +17,36 @@
     <div class="text-white text-center leading-loose font-bold italic uppercase mt-8 lg:mt-0 lg:w-4/12 lg:text-left">
         <ul>
             <li>
-                <a href="#">Chi siamo</a>
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('chi-siamo')"
+                >
+                    Chi siamo
+                </a>
             </li>
             <li>
-                <a href="#">Come funziona</a>
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('come-funziona')"
+                >
+                    Come funziona
+                </a>
             </li>
             <li>
-                <a href="#">Iscriviti</a>
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('iscriviti')"
+                >
+                    Iscriviti
+                </a>
             </li>
             <li>
-                <a href="#">Contattaci</a>
+                <a
+                    href="#"
+                    @click.prevent.stop="goTo('contattaci')"
+                >
+                    Contattaci
+                </a>
             </li>
         </ul>
     </div>
@@ -82,6 +102,6 @@
 
 <script>
 export default {
-    name: 'CallToAction',
+    name: 'MainFooter',
 }
 </script>
