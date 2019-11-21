@@ -63,7 +63,10 @@
             </li>
         </ul>
     </div>
-    <div class="text-white ml-auto cursor-pointer">
+    <div
+        class="text-white ml-auto cursor-pointer lg:hidden"
+        @click="$emit('menu-toggle')"
+    >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 65.34 61.06"
