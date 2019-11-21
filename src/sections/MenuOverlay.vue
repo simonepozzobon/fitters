@@ -72,17 +72,23 @@ export default {
                 duration: .2,
                 autoAlpha: 1,
                 height: '100%',
-                ease: 'power4.easeInOut'
+                ease: 'power4.easeInOut',
+                onStart: () => {
+                    // eslint-disable-next-line no-console
+                    console.log('starting');
+                }
             })
         },
         toggle: function () {
-            if (this.isOpen) {
-                this.master.reverse()
-                this.isOpen = false
-            }
-            else {
-                this.master.play()
-                this.isOpen = true
+            if (this.master) {
+                if (this.isOpen) {
+                    this.master.reverse()
+                    this.isOpen = false
+                }
+                else {
+                    this.master.play()
+                    this.isOpen = true
+                }
             }
         },
         goTo: function (name) {
