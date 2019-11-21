@@ -72,7 +72,6 @@ export default {
                 autoAlpha: 1,
                 height: '100%',
                 ease: 'power4.easeInOut',
-                immediateRender: false,
             })
 
             this.master.progress(1).progress(0)
