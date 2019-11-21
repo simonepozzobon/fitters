@@ -41,13 +41,12 @@
 </template>
 
 <script>
-/* eslint-disable no-unused-vars */
 import {
     gsap,
     ScrollToPlugin,
 }
 from 'gsap/all'
-/* eslint-enable no-unused-vars */
+gsap.registerPlugin(ScrollToPlugin)
 
 export default {
     name: 'MenuOverlay',
@@ -60,11 +59,6 @@ export default {
     methods: {
         init: function () {
             let menu = this.$refs.menu
-
-            gsap.set(menu, {
-                height: 0,
-                autoAlpha: 0,
-            })
 
             this.master = gsap.timeline({
                 paused: true,

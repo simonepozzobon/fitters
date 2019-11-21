@@ -83,7 +83,6 @@
 </template>
 
 <script>
-/* eslint-disable no-unused-vars */
 import {
     gsap,
     ScrollToPlugin,
@@ -91,7 +90,6 @@ import {
 from 'gsap/all'
 
 gsap.registerPlugin(ScrollToPlugin)
-/* eslint-enable no-unused-vars */
 
 export default {
     name: 'NavBar',

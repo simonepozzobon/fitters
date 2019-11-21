@@ -101,7 +101,26 @@
 </template>
 
 <script>
+import {
+    gsap,
+    ScrollToPlugin,
+}
+from 'gsap/all'
+
+gsap.registerPlugin(ScrollToPlugin)
+
 export default {
     name: 'MainFooter',
+    methods: {
+        goTo: function (name) {
+            gsap.to(window, {
+                duration: .4,
+                scrollTo: {
+                    y: `#${name}`,
+                    offsetY: 109,
+                }
+            })
+        }
+    },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
 <div
     id="chi-siamo"
-    class="py-8 px-12 gr-dark"
+    class="pt-8 pb-16 px-12 gr-dark"
     v-view="viewHandler"
 >
     <div class="flex flex-row">
