@@ -1,7 +1,7 @@
 <template>
 <div
     ref="menu"
-    class="flex flex-row items-center py-8 px-12 fixed w-full smooth"
+    class="flex flex-row items-center py-8 px-8 md:px-12 fixed w-full smooth"
 >
     <div class="text-white">
         <svg
@@ -62,6 +62,19 @@
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="text-white ml-auto cursor-pointer">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 65.34 61.06"
+            class="h-8"
+        >
+            <path
+                class="fill-current"
+                d="M3.87,46.67H53.21L49.37,61.06H0ZM65.34,0H16.4L12.53,14.39H61.41ZM6.47,37H52.34l3.57-13.35H10.05Z"
+            />
+        </svg>
+
     </div>
 </div>
 </template>
