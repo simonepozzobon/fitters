@@ -1,7 +1,7 @@
 <template>
 <div
     ref="menu"
-    class="fixed overflow-hidden w-full h-full gr-dark flex justify-center items-center menu-mobile"
+    class="fixed overflow-hidden w-full gr-dark flex justify-center items-center menu-mobile"
 >
     <ul class="py-24 text-white font-bold flex flex-col justify-around h-full text-center">
         <li class="">
@@ -76,6 +76,10 @@ export default {
                 onStart: () => {
                     // eslint-disable-next-line no-console
                     console.log('starting');
+                },
+                onUpdate: () => {
+                    // eslint-disable-next-line no-console
+                    console.log('progress');
                 }
             })
         },
@@ -109,7 +113,9 @@ export default {
         }
     },
     mounted: function () {
-        this.init()
+        this.$nextTick(() => {
+            this.init()
+        })
     },
 }
 </script>
