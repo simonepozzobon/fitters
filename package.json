@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "core-js": "^3.3.2",
-        "gsap": "file:../Downloads/gsap-shockingly-green/npm-install-this/gsap-bonus.tgz",
+        "gsap": "file:../Downloads/greensock-js-shockingly-green/gsap-3-beta/npm-install-this/gsap-bonus.tgz",
         "tailwindcss": "^1.1.3",
         "vue": "^2.6.10",
         "vue-check-view": "^0.3.0",

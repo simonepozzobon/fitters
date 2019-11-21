@@ -32,8 +32,17 @@ export default {
         }
     },
     methods: {
-        toggle: function () {
-            this.selected = !this.selected
+        toggle: function (emitEvent = true, value = null) {
+            if (value != null) {
+                this.selected = value
+            }
+            else {
+                this.selected = !this.selected
+            }
+
+            if (emitEvent) {
+                this.$emit('update', this.selected)
+            }
         },
     },
 }

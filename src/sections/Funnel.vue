@@ -34,10 +34,16 @@
     </div>
 
     <div class="mt-12">
-        <ui-checkbox label="Ho un abbonamento in palestra" />
         <ui-checkbox
+            ref="check1"
+            label="Ho un abbonamento in palestra"
+            @update="updateCheckbox($event, 'check1')"
+        />
+        <ui-checkbox
+            ref="check2"
             label="Non ho un abbonamento in palestra"
             class="mt-8"
+            @update="updateCheckbox($event, 'check2')"
         />
     </div>
 
@@ -64,12 +70,25 @@ export default {
         UiInput,
         UiTitle,
     },
+    data: function () {
+        return {
+            checkbox: null,
+        }
+    },
     methods: {
         viewHandler: function (e) {
             if (e.percentInView > 0.5) {
                 this.$root.current = 'iscriviti'
             }
-        }
+        },
+        updateCheckbox: function (value, key) {
+            if (key == 'check1') {
+                this.$refs.check2.toggle(false, !value)
+            }
+            else {
+                this.$refs.check1.toggle(false, !value)
+            }
+        },
     },
 }
 </script>
