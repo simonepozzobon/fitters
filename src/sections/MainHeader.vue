@@ -8,12 +8,11 @@
         alt=""
         class="h-full hidden md:block"
     >
-    <div class="main-image md:hidden">
-        <img
-            :src="mainMobile"
-            alt=""
-            class="main-image__bg"
-        >
+    <div
+        class="main-image md:hidden"
+        :style="`background-image: url('${mainMobile}');`"
+    >
+
         <img
             :src="mainMobileText"
             alt=""
@@ -53,14 +52,9 @@ export default {
     position: relative;
     height: 100vh;
     overflow: hidden;
-
-    &__bg {
-        position: absolute;
-        width: 100vw;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     &__text {
         position: absolute;
