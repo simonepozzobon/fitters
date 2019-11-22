@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1125 2199.63">
+  <defs>
+    <linearGradient id="New_Gradient_Swatch_1" data-name="New Gradient Swatch 1" x1="352.31" y1="1520.72" x2="1125" y2="1520.72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2a00"/>
+      <stop offset="0.29" stop-color="#ff2e00"/>
+      <stop offset="0.59" stop-color="#ff3b00"/>
+      <stop offset="0.89" stop-color="#ff4f00"/>
+      <stop offset="1" stop-color="#ff5900"/>
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_1-2" x1="0" y1="678.04" x2="772.69" y2="678.04" xlink:href="#New_Gradient_Swatch_1"/>
+  </defs>
+  <title>main_mobile</title>
+  <g id="Layer_4" data-name="Layer 4">
+    <g>
+      <path d="M994.32,880.61a618.1,618.1,0,0,0-256.8,151.14L576.61,1189.47a618.15,618.15,0,0,0-166.25,288.6l-38.85,152.24a618.15,618.15,0,0,0,9,337.54l72.57,231.77H1125V841.82Z" style="fill: url(#New_Gradient_Swatch_1)"/>
+      <path d="M0,0V1356.09l130.68-38.79a618.21,618.21,0,0,0,256.8-151.14l160.91-157.72a618.15,618.15,0,0,0,166.25-288.6l38.85-152.25a618.16,618.16,0,0,0-9-337.54l-72-230Z" style="fill: url(#New_Gradient_Swatch_1-2)"/>
+    </g>
+  </g>
+</svg>
