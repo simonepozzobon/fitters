@@ -113,6 +113,8 @@ export default {
 
 <style lang="scss">
 .menu-mobile {
+    z-index: 2;
+
     li {
         @apply rounded-full px-6 py-3;
 

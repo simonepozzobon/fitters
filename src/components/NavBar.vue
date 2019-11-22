@@ -172,7 +172,7 @@ export default {
 
 .smooth {
     transition: all 0.2s ease-in-out;
-    z-index: 1;
+    z-index: 3;
 
     > div {
         z-index: 2;
