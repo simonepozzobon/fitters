@@ -73,8 +73,6 @@ export default {
                 height: '100%',
                 ease: 'power4.easeInOut',
             })
-
-            this.master.progress(1).progress(0)
         },
         toggle: function () {
             if (this.master) {

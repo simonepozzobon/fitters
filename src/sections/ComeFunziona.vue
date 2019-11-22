@@ -16,7 +16,7 @@
     <img
         :src="comeFunzionaMobile"
         alt="Come Funziona"
-        class="md:hidden"
+        class="md:hidden mt-8"
     >
 </div>
 </template>
