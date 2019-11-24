@@ -3,6 +3,7 @@
     href="#"
     class="gr-orange rounded-full text-white font-semibold"
     :class="sizeClass"
+    @click.prevent.stop="$emit('click')"
 >
     {{ title }}
 </a>
@@ -20,6 +21,7 @@ export default {
             type: String,
             default: null,
         },
+
     },
     computed: {
         sizeClass: function () {

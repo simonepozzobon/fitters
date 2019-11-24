@@ -4,17 +4,38 @@
         Vieni in palestra con noi.
     </div>
     <div class="mt-6 md:mt-0 md:ml-auto">
-        <ui-button title="Iscriviti" />
+        <ui-button
+            title="Iscriviti"
+            @click="goTo('iscriviti')"
+        />
     </div>
 </div>
 </template>
 
 <script>
 import UiButton from './UiButton.vue'
+import {
+    gsap,
+    ScrollToPlugin,
+}
+from 'gsap/all'
+
+gsap.registerPlugin(ScrollToPlugin)
 export default {
     name: 'CallToAction',
     components: {
         UiButton,
+    },
+    methods: {
+        goTo: function (name) {
+            gsap.to(window, {
+                duration: .4,
+                scrollTo: {
+                    y: `#${name}`,
+                    offsetY: 109,
+                }
+            })
+        }
     },
 }
 </script>

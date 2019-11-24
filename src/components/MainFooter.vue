@@ -58,14 +58,22 @@
                 </a>
             </li>
             <li class="mt-6">
-                Via Arrigo Boito, 8<br>
-                20121, Milano
+                <a
+                    href="https://www.google.com/maps/place/Via+Arrigo+Boito,+8,+20121+Milano+MI/@45.4683445,9.185692,17z/data=!3m1!4b1!4m5!3m4!1s0x4786c6b262be1127:0x89bdcd53c2f3189b!8m2!3d45.4683408!4d9.1878807?hl=it"
+                    target="_blank"
+                >
+                    Via Arrigo Boito, 8<br>
+                    20121, Milano
+                </a>
             </li>
         </ul>
     </div>
     <div class="text-white flex flex-row justify-end items-center mt-8 lg:mt-2 lg:self-center lg:w-4/12">
         <div class="w-8 h-8">
-            <a href="#">
+            <a
+                href="https://instagram.com/fittersharing"
+                target="_blank"
+            >
                 <svg
                     viewBox="0 0 128 128"
                     version="1.1"
@@ -81,7 +89,10 @@
             </a>
         </div>
         <div class="ml-8 w-8 h-8">
-            <a href="#">
+            <a
+                href="https://www.facebook.com/fittersharing"
+                target="_blank"
+            >
                 <svg
                     viewBox="0 0 128 128"
                     version="1.1"
