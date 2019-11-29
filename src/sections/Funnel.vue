@@ -151,6 +151,9 @@ export default {
                         this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
                     }
                 }
+            }).catch(() => {
+                this.hasLink = true
+                this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
             })
         },
     },
