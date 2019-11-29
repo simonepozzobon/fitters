@@ -6,9 +6,12 @@ import axios from 'axios'
 import checkView from 'vue-check-view'
 Vue.use(checkView)
 
+const baseURL = process.env.VUE_APP_API_URL
+console.log(baseURL);
+
 Vue.config.productionTip = false
 Vue.prototype.$http = axios.create({
-    baseURL: process.env.API_URL
+    baseURL: baseURL
 })
 
 new Vue({
