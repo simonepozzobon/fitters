@@ -1,11 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import axios from 'axios'
 
 import checkView from 'vue-check-view'
 Vue.use(checkView)
 
 Vue.config.productionTip = false
+Vue.prototype.$http = axios.create({
+    baseURL: 'http://fitters-back.test/api'
+})
 
 new Vue({
     router,
