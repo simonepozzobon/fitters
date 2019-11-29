@@ -8,7 +8,7 @@ Vue.use(checkView)
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios.create({
-    baseURL: 'http://fitters-back.test/api'
+    baseURL: process.env.API_URL
 })
 
 new Vue({
