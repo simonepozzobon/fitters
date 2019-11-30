@@ -149,8 +149,9 @@ export default {
                 let data = response.data
                 if (data.success) {
                     this.message = 'Grazie, ora fai parte anche tu della rivoluzione'
-                    this.loader = false
-
+                    setTimeout(() => {
+                        this.loader = false
+                    }, 250)
                     setTimeout(() => {
                         this.email = null
                         this.name = null
@@ -161,19 +162,30 @@ export default {
                 else {
                     if (data.results.title == 'Member Exists') {
                         this.message = 'Attenzione: Questa mail è già nei nostri contatti!'
-                        this.loader = false
+                        setTimeout(() => {
+                            this.loader = false
+                        }, 250)
                     }
                     else {
                         this.hasLink = true
                         this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
-                        this.loader = false
+                        setTimeout(() => {
+                            this.loader = false
+                        }, 250)
                     }
                 }
             }).catch(() => {
                 this.hasLink = true
                 this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
-                this.loader = false
+                setTimeout(() => {
+                    this.loader = false
+                }, 250)
             })
+
+            setTimeout(() => {
+                this.hasLink = null
+                this.message = null
+            }, 5000)
         },
     },
 }

@@ -125,7 +125,6 @@ export default {
             data.append('message', this.message)
 
             this.$http.post('/send-mail', data).then(response => {
-                console.log(response);
                 if (response.data.success) {
                     this.serviceMessage = 'Grazie, ti risponderemo al più presto'
                     setTimeout(() => {
