@@ -52,11 +52,20 @@
                 />
             </div>
         </div>
-
+        <transition name="fade">
+            <div
+                v-if="message"
+                class="mt-12 text-4xl font-bold text-gr-orange text-center"
+            >
+                {{ this.message }}
+            </div>
+        </transition>
         <div class="mt-12">
             <ui-button
                 title="Invia"
                 size="lg"
+                :loader="loader"
+                @click="send"
             />
         </div>
     </div>
@@ -77,12 +86,27 @@ export default {
         UiTitle,
         UiTextArea,
     },
+    data: function () {
+        return {
+            loader: false,
+            message: null,
+        }
+    },
     methods: {
         viewHandler: function (e) {
             if (e.percentInView > 0.5) {
                 this.$root.current = 'contattaci'
             }
-        }
+        },
+        send: function () {
+            this.loader = true
+            this.message = null
+
+            setTimeout(() => {
+                this.message = 'Grazie, ti risponderemo al più presto'
+                this.loader = false
+            }, 3000)
+        },
     },
 }
 </script>

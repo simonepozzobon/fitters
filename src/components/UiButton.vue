@@ -1,7 +1,8 @@
 <template>
 <div
-    class="relative gr-orange rounded-full"
+    class="relative gr-orange rounded-full cursor-pointer"
     :class="[sizeClass, loaderClass, visibleClass]"
+    @click.prevent.stop="$emit('click')"
 >
     <a
         href="#"
