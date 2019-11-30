@@ -33,6 +33,7 @@ module.exports = {
             },
             spacing: {
                 '28': '7rem',
+                '7': '1.75rem',
             },
             borderRadius: {
                 'xl': '1.25rem',
@@ -41,6 +42,10 @@ module.exports = {
 
         minHeight: {
             'slide': 'calc(100vh - 10rem)',
+            '8': '2rem',
+        },
+        minWidth: {
+            '8': '2rem',
         },
         maxHeight: {
             'slide': 'calc(100vh - 10rem)',

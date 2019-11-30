@@ -77,6 +77,7 @@
         <ui-button
             title="Iscriviti"
             size="lg"
+            :loader="loader"
             @click="send"
         />
     </div>
@@ -105,6 +106,7 @@ export default {
             email: null,
             message: null,
             hasLink: false,
+            loader: false,
         }
     },
     methods: {
@@ -127,8 +129,10 @@ export default {
             this[key] = value
         },
         send: function () {
+            this.loader = true
             this.hasLink = null
             this.message = null
+
             let data = new FormData()
             data.append('email', this.email)
             data.append('fields', JSON.stringify({
@@ -141,19 +145,23 @@ export default {
                 let data = response.data
                 if (data.success) {
                     this.message = 'Grazie, ora fai parte anche tu della rivoluzione'
+                    this.loader = false
                 }
                 else {
                     if (data.results.title == 'Member Exists') {
                         this.message = 'Attenzione: Questa mail è già nei nostri contatti!'
+                        this.loader = false
                     }
                     else {
                         this.hasLink = true
                         this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
+                        this.loader = false
                     }
                 }
             }).catch(() => {
                 this.hasLink = true
                 this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
+                this.loader = false
             })
         },
     },
