@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 600ms ease-in-out;
+}
+.fade-enter-to,
+.fade-leave {
+    opacity: 1;
+    height: 100%;
+
+    .fade-container {
+        position: relative;
+    }
+}
+
+/* .fade-leave-active below version 2.1.8 */
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    height: 0;
+
+    .fade-container {
+        position: absolute;
+    }
+}

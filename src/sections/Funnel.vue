@@ -52,25 +52,29 @@
     <transition name="fade">
         <div
             v-if="message"
-            class="mt-12 text-4xl font-bold text-gr-orange text-center"
+            class="fade-container relative overflow-hidden"
         >
-            {{ this.message }}
-            <transition name="fade">
-                <div
-                    v-if="hasLink"
-                    class="text-dark text-base mt-4"
-                >
-                    Se il problema persiste ti preghiamo di provare a questo link:
-                    <br>
-                    <a
-                        href="http://eepurl.com/gGxwzf"
-                        target="_blank"
-                        class="underline inline-block mt-1"
+            <div class="mt-12 text-4xl font-bold text-gr-orange text-center">
+                {{ this.message }}
+                <transition name="fade">
+                    <div
+                        v-if="hasLink"
+                        class="relative overflow-hidden"
                     >
-                        http://eepurl.com/gGxwzf
-                    </a>
-                </div>
-            </transition>
+                        <div class="text-dark text-base mt-4">
+                            Se il problema persiste ti preghiamo di provare a questo link:
+                            <br>
+                            <a
+                                href="http://eepurl.com/gGxwzf"
+                                target="_blank"
+                                class="underline inline-block mt-1"
+                            >
+                                http://eepurl.com/gGxwzf
+                            </a>
+                        </div>
+                    </div>
+                </transition>
+            </div>
         </div>
     </transition>
     <div class="mt-24">
@@ -167,15 +171,3 @@ export default {
     },
 }
 </script>
-
-<style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.2s ease-in-out;
-}
-/* .fade-leave-active below version 2.1.8 */
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
-}
-</style>

@@ -55,9 +55,11 @@
         <transition name="fade">
             <div
                 v-if="message"
-                class="mt-12 text-4xl font-bold text-gr-orange text-center"
+                class="relative overflow-hidden"
             >
-                {{ this.message }}
+                <div class="mt-12 text-4xl font-bold text-gr-orange text-center">
+                    {{ this.message }}
+                </div>
             </div>
         </transition>
         <div class="mt-12">
