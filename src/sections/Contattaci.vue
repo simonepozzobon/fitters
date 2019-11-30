@@ -18,6 +18,7 @@
                     name="name"
                     placeholder="Nome"
                     color="white"
+                    :content.sync="name"
                 />
             </div>
             <div class="w-full mt-8 lg:mt-0 lg:w-6/12 lg:ml-6">
@@ -25,6 +26,7 @@
                     name="surname"
                     placeholder="Cognome"
                     color="white"
+                    :content.sync="surname"
                 />
             </div>
         </div>
@@ -35,6 +37,7 @@
                     name="email"
                     placeholder="Email"
                     color="white"
+                    :content.sync="email"
                 />
             </div>
             <div class="w-full mt-8">
@@ -42,6 +45,7 @@
                     name="subject"
                     placeholder="Oggetto"
                     color="white"
+                    :content.sync="subject"
                 />
             </div>
             <div class="w-full mt-8">
@@ -49,16 +53,17 @@
                     name="message"
                     placeholder="Messaggio"
                     color="white"
+                    :content.sync="message"
                 />
             </div>
         </div>
         <transition name="fade">
             <div
-                v-if="message"
+                v-if="serviceMessage"
                 class="relative overflow-hidden"
             >
                 <div class="mt-12 text-4xl font-bold text-gr-orange text-center">
-                    {{ this.message }}
+                    {{ this.serviceMessage }}
                 </div>
             </div>
         </transition>
@@ -91,7 +96,12 @@ export default {
     data: function () {
         return {
             loader: false,
+            name: null,
+            surname: null,
+            email: null,
+            subject: null,
             message: null,
+            serviceMessage: null,
         }
     },
     methods: {
@@ -100,14 +110,52 @@ export default {
                 this.$root.current = 'contattaci'
             }
         },
+        update: function (value, key) {
+            this[key] = value
+        },
         send: function () {
             this.loader = true
-            this.message = null
+            this.serviceMessage = null
+
+            let data = new FormData()
+            data.append('name', this.name)
+            data.append('surname', this.surname)
+            data.append('subject', this.subject)
+            data.append('email', this.email)
+            data.append('message', this.message)
+
+            this.$http.post('/send-mail', data).then(response => {
+                console.log(response);
+                if (response.data.success) {
+                    this.serviceMessage = 'Grazie, ti risponderemo al più presto'
+                    setTimeout(() => {
+                        this.loader = false
+                    }, 250)
+
+                    setTimeout(() => {
+                        this.name = null
+                        this.surname = null
+                        this.subject = null
+                        this.email = null
+                        this.message = null
+                    }, 500)
+                }
+                else {
+                    this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
+                    setTimeout(() => {
+                        this.loader = false
+                    }, 250)
+                }
+            }).catch(() => {
+                this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
+                setTimeout(() => {
+                    this.loader = false
+                }, 250)
+            })
 
             setTimeout(() => {
-                this.message = 'Grazie, ti risponderemo al più presto'
-                this.loader = false
-            }, 3000)
+                this.serviceMessage = null
+            }, 5000)
         },
     },
 }

@@ -14,14 +14,14 @@
             <ui-input
                 name="name"
                 placeholder="Nome"
-                @update="update($event, 'name')"
+                :content.sync="name"
             />
         </div>
         <div class="mt-10 lg:mt-0 lg:w-6/12 lg:ml-6">
             <ui-input
                 name="surname"
                 placeholder="Cognome"
-                @update="update($event, 'surname')"
+                :content.sync="surname"
             />
         </div>
     </div>
@@ -31,7 +31,7 @@
                 type="email"
                 name="email"
                 placeholder="Email"
-                @update="update($event, 'email')"
+                :content.sync="email"
             />
         </div>
     </div>
@@ -150,6 +150,13 @@ export default {
                 if (data.success) {
                     this.message = 'Grazie, ora fai parte anche tu della rivoluzione'
                     this.loader = false
+
+                    setTimeout(() => {
+                        this.email = null
+                        this.name = null
+                        this.surname = null
+                        this.checkbox = 1
+                    }, 500)
                 }
                 else {
                     if (data.results.title == 'Member Exists') {
