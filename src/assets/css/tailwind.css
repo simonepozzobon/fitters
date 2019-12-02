@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .fade-enter-active,
 .fade-leave-active {
     transition: all 600ms ease-in-out;
 }
+
 .fade-enter-to,
 .fade-leave {
     opacity: 1;
-    height: 100%;
 
     .fade-container {
+        height: 100%;
         position: relative;
     }
 }
@@ -21,9 +21,9 @@
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
-    height: 0;
 
     .fade-container {
+        height: 0;
         position: absolute;
     }
 }

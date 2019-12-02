@@ -57,16 +57,14 @@
                 />
             </div>
         </div>
-        <transition name="fade">
-            <div
-                v-if="serviceMessage"
-                class="relative overflow-hidden"
-            >
-                <div class="mt-12 text-4xl font-bold text-gr-orange text-center">
-                    {{ this.serviceMessage }}
-                </div>
+        <div
+            class="form-message"
+            :class="visibleClass"
+        >
+            <div class="form-message__content">
+                {{ this.serviceMessage }}
             </div>
-        </transition>
+        </div>
         <div class="mt-12">
             <ui-button
                 title="Invia"
@@ -102,7 +100,16 @@ export default {
             subject: null,
             message: null,
             serviceMessage: null,
+            visible: false,
         }
+    },
+    computed: {
+        visibleClass: function () {
+            if (this.visible) {
+                return 'form-message--visible'
+            }
+            return 'form-message--hidden'
+        },
     },
     methods: {
         viewHandler: function (e) {
@@ -114,6 +121,7 @@ export default {
             this[key] = value
         },
         send: function () {
+            this.visible = false
             this.loader = true
             this.serviceMessage = null
 
@@ -126,6 +134,7 @@ export default {
 
             this.$http.post('/send-mail', data).then(response => {
                 if (response.data.success) {
+                    this.visible = true
                     this.serviceMessage = 'Grazie, ti risponderemo al più presto'
                     setTimeout(() => {
                         this.loader = false
@@ -140,12 +149,14 @@ export default {
                     }, 500)
                 }
                 else {
+                    this.visible = true
                     this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
                     setTimeout(() => {
                         this.loader = false
                     }, 250)
                 }
             }).catch(() => {
+                this.visible = true
                 this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
                 setTimeout(() => {
                     this.loader = false
@@ -153,9 +164,62 @@ export default {
             })
 
             setTimeout(() => {
+                this.visible = false
                 this.serviceMessage = null
-            }, 5000)
+            }, 2000)
         },
+        loop: function () {
+            setTimeout(() => {
+                this.visible = true
+                this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
+            }, 100)
+
+            // setTimeout(() => {
+            //     this.visible = false
+            //     this.serviceMessage = 'Si è verificato un errore, prova ad inviare di nuovo'
+            // }, 3100)
+
+            // setTimeout(() => {
+            //     this.loop()
+            // }, 6500)
+        },
+    },
+    mounted: function () {
+        // this.loop()
     },
 }
 </script>
+
+
+<style lang="scss">
+.form-message {
+    width: 100%;
+    overflow: hidden;
+
+    &--visible {
+        transition: all 3000ms ease-in-out 100ms;
+    }
+
+    &--hidden {
+        transition: all 3000ms ease-in-out 100ms;
+    }
+
+    &__content {
+        @apply text-4xl font-bold text-gr-orange text-center;
+    }
+
+    &--visible &__content {
+        // opacity: 1;
+        @apply my-6;
+        max-height: 100vh;
+        transition: all 3000ms ease-in-out 100ms;
+    }
+
+    &--hidden &__content {
+        // opacity: 0;
+        @apply my-0;
+        max-height: 0;
+        transition: all 3000ms ease-in-out 100ms;
+    }
+}
+</style>
