@@ -168,7 +168,7 @@ export default {
                     }
                     else {
                         this.hasLink = true
-                        this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
+                        this.message = 'C\'è qualcosa che non va, controlla di aver inserito tutti i dati correttamente'
                         setTimeout(() => {
                             this.loader = false
                         }, 250)
@@ -176,7 +176,7 @@ export default {
                 }
             }).catch(() => {
                 this.hasLink = true
-                this.message = 'Si è verificato un errore, ti preghiamo di riprovare'
+                this.message = 'C\'è qualcosa che non va, controlla di aver inserito tutti i dati correttamente'
                 setTimeout(() => {
                     this.loader = false
                 }, 250)
