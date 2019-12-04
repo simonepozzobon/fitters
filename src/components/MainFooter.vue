@@ -53,8 +53,8 @@
     <div class="text-white leading-loose font-semibold italic tracking-wider text-center mt-8 lg:mt-0 lg:w-4/12 lg:text-left">
         <ul>
             <li>
-                <a href="mailto:fitters.app@gmail.com">
-                    fitters.app@gmail.com
+                <a href="mailto:info@fittersharing.com">
+                    info@fittersharing.com
                 </a>
             </li>
             <li class="mt-6">
