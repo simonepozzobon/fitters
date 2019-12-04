@@ -182,10 +182,10 @@ export default {
                 }, 250)
             })
 
-            setTimeout(() => {
-                this.hasLink = null
-                this.message = null
-            }, 5000)
+            // setTimeout(() => {
+            //     this.hasLink = null
+            //     this.message = null
+            // }, 5000)
         },
     },
 }

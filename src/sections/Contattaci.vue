@@ -163,10 +163,10 @@ export default {
                 }, 250)
             })
 
-            setTimeout(() => {
-                this.visible = false
-                this.serviceMessage = null
-            }, 5000)
+            // setTimeout(() => {
+            //     this.visible = false
+            //     this.serviceMessage = null
+            // }, 5000)
         },
         loop: function () {
             setTimeout(() => {
